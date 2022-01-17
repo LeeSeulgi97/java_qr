@@ -8,4 +8,18 @@
     tools:context=".MainActivity">
 
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="바코드 찍기"
+        android:id="@+id/qrcode"
+        android:onClick="qrbtn"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="난수 생성하기"
+        android:id="@+id/random_btn"
+        android:onClick="randombtn"/>
+
 </LinearLayout>
