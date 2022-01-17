@@ -3,7 +3,6 @@ package com.soha.javaqrcode;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,5 +26,10 @@ public class MainActivity extends AppCompatActivity{
         random_num = (int) (Math.random()*1000000);
         Toast.makeText(getApplicationContext(), "랜덤 숫자"+ random_num,
                 Toast.LENGTH_LONG).show();
+    }
+
+    public void passwordbtn(View v){
+        Intent intent = new Intent(this,password.class);
+        startActivity(intent);
     }
 }

@@ -23,4 +23,11 @@
         android:id="@+id/random_btn"
         android:onClick="randombtn"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="암복호화 테스트"
+        android:id="@+id/password"
+        android:onClick="passwordbtn"/>
+
 </LinearLayout>

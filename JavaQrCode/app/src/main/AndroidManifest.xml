@@ -16,6 +16,12 @@
         android:theme="@style/Theme.JavaQrCode"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".LoginPage"
+            android:exported="false" />
+        <activity
+            android:name=".password"
+            android:exported="false" />
+        <activity
             android:name=".QrCode"
             android:exported="false" />
         <activity
