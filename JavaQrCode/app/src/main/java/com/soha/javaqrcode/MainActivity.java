@@ -1,11 +1,20 @@
 package com.soha.javaqrcode;
 
 import android.content.Intent;
+import android.net.Network;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -31,5 +40,11 @@ public class MainActivity extends AppCompatActivity{
     public void passwordbtn(View v){
         Intent intent = new Intent(this,password.class);
         startActivity(intent);
+    }
+
+    public void apibtn(View v){
+        String test;
+        UserInfoTask UserInfoTask = new UserInfoTask();
+        UserInfoTask.sendUserInfo();
     }
 }

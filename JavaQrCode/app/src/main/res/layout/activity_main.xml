@@ -29,5 +29,11 @@
         android:text="암복호화 테스트"
         android:id="@+id/password"
         android:onClick="passwordbtn"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="api 테스트"
+        android:id="@+id/api"
+        android:onClick="apibtn"/>
 
 </LinearLayout>
