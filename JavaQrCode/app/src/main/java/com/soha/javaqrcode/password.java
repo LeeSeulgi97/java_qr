@@ -19,15 +19,15 @@ public class password extends AppCompatActivity {
     public void enc_btn(View v) throws Exception {
 
         AES256 aes256 = new AES256();
-        String text = "테스트문구 확인1234!";
+        String text = "암복호화 테스트 iv는 랜덤_앞에 16바이트 붙여서 보내기";
         cipherText = aes256.encrypt(text);
         System.out.println(text);
         System.out.println(cipherText);
-        System.out.println(aes256.decrypt(cipherText));
+//        System.out.println(aes256.decrypt(cipherText));
     }
 
-    public void dec_btn(View v){
-        Intent intent = new Intent(this,QrCode.class);
-        startActivity(intent);
+    public void dec_btn(View v) throws Exception {
+        AES256 aes256 = new AES256();
+        System.out.println(aes256.decrypt(cipherText));
     }
 }

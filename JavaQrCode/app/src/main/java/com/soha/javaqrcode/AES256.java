@@ -1,6 +1,7 @@
 package com.soha.javaqrcode;
 
 import android.os.Build;
+import android.util.Log;
 
 import java.util.Base64;
 import javax.crypto.Cipher;
@@ -10,10 +11,13 @@ import javax.crypto.spec.SecretKeySpec;
 public class AES256 {
 
     public static String alg = "AES/CBC/PKCS5Padding";
-    private final String key = "01234567890123456789012345678901";
+    private final String key = "461132e740d98afb";
     private final String iv = key.substring(0, 16); // 16byte
 
+
+
     public String encrypt(String text) throws Exception {
+        Log.e("test","iv값"+iv);
         Cipher cipher = Cipher.getInstance(alg);
         SecretKeySpec keySpec = new SecretKeySpec(key.getBytes(), "AES");
         IvParameterSpec ivParamSpec = new IvParameterSpec(iv.getBytes());
